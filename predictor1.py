@@ -86,7 +86,7 @@ with st.form("prediction_form"):
 
     with col2:
         # Mean Corpuscular Hemoglobin Concentration
-        mac = st.number_input("平上臂中点周长:MAC (cm)", min_value=10.0, max_value=100.0, value=330.0, format="%.1f")
+        mac = st.number_input("平上臂中点周长:MAC (cm)", min_value=10.0, max_value=100.0, value=30.0, format="%.1f")
 
     st.markdown("")  # Spacing
 
@@ -194,4 +194,5 @@ if submitted:
         st.caption("0% = No Risk | 100% = Certainty")
 
     except Exception as e:
+
         st.error(f"An error occurred during prediction: {str(e)}")
