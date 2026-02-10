@@ -5,7 +5,7 @@ import numpy as np
 
 # ================= Configuration =================
 st.set_page_config(
-    page_title="脑卒中后患相关肺炎风险预测",
+    page_title="脑卒中后患相关肺炎（SAP）风险预测",
     page_icon="🏥",
     layout="centered"
 )
@@ -43,7 +43,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ================= Header =================
-st.title("🏥 脑卒中后风险预测")
+st.title("🏥 脑卒中后患相关肺炎（SAP）风险预测")
 st.markdown("""
     本工具基于 **Logistic Regression**模型用于预测脑卒中患者的**SAP**发病风险。
 """)
@@ -196,6 +196,7 @@ if submitted:
     except Exception as e:
 
         st.error(f"An error occurred during prediction: {str(e)}")
+
 
 
 
