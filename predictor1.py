@@ -120,7 +120,7 @@ with st.form("prediction_form"):
     with col6:
         globulin = st.number_input("球蛋白：Globulin (g/L)", min_value=10.0, max_value=100.0, value=25.0, format="%.1f")
     with col7:
-        hb = st.number_input("血红蛋白：Hemoglobin (Hb) (g/L)", min_value=50, max_value=250.0, value=130.0, format="%.1f")
+        hb = st.number_input("血红蛋白：Hemoglobin (Hb) (g/L)", min_value=50.0, max_value=250.0, value=130.0, format="%.1f")
     with col8:
         ca = st.number_input("钙：Calcium (Ca) (mmol/L)", min_value=1.0, max_value=5.0, value=2.25, format="%.2f")
 
@@ -196,3 +196,4 @@ if submitted:
     except Exception as e:
 
         st.error(f"An error occurred during prediction: {str(e)}")
+
