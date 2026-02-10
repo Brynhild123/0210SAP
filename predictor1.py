@@ -5,7 +5,7 @@ import numpy as np
 
 # ================= Configuration =================
 st.set_page_config(
-    page_title="脑卒中后风险预测",
+    page_title="脑卒中后SAP风险预测",
     page_icon="🏥",
     layout="centered"
 )
@@ -172,7 +172,7 @@ if submitted:
                     <h2 style="color: #c62828;">⚠️ High Risk Detected</h2>
                     <h1 style="font-size: 50px; color: #c62828; margin: 10px 0;">{risk_percentage:.1f}%</h1>
                     <p style="font-size: 18px; color: #b71c1c;">
-                        The model suggests this patient is at <b>HIGH risk</b> for Severe Acute Pancreatitis.
+                        结果提示患者存在较<b>高</b> 患SAP风险.
                     </p>
                 </div>
             """, unsafe_allow_html=True)
@@ -182,7 +182,7 @@ if submitted:
                     <h2 style="color: #2e7d32;">✅ Low Risk</h2>
                     <h1 style="font-size: 50px; color: #2e7d32; margin: 10px 0;">{risk_percentage:.1f}%</h1>
                     <p style="font-size: 18px; color: #1b5e20;">
-                        The model suggests this patient is at <b>LOW risk</b> for Severe Acute Pancreatitis.
+                        结果提示患者存在较<b>低</b> 患SAP风险.
                     </p>
                 </div>
             """, unsafe_allow_html=True)
@@ -196,4 +196,5 @@ if submitted:
     except Exception as e:
 
         st.error(f"An error occurred during prediction: {str(e)}")
+
 
