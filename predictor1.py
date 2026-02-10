@@ -5,7 +5,7 @@ import numpy as np
 
 # ================= Configuration =================
 st.set_page_config(
-    page_title="脑卒中后SAP风险预测",
+    page_title="脑卒中后患相关肺炎风险预测",
     page_icon="🏥",
     layout="centered"
 )
@@ -196,5 +196,6 @@ if submitted:
     except Exception as e:
 
         st.error(f"An error occurred during prediction: {str(e)}")
+
 
 
